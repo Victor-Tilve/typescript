@@ -1,9 +1,35 @@
-const add = (a: number, b: number = 1) => a +b;
-const printOutput: (a:number | string) => void = output => console.log(output);
+const hobbies = ['Sports','Cooking'];
+const activieHobbies = ['Hiking'];
 
-const button = document.querySelector('button');
+activieHobbies.push(...hobbies)
 
-if(button){
-    button.addEventListener('click', event => console.log(event));
+const person ={
+    firstname: 'Victor',
+    age: 27,
 }
-printOutput(add(5));
+
+const copiedPerson3 =  {...person}
+console.log(copiedPerson3);
+
+
+const add3 = (...number:number[]) => {
+        let result = 0;
+        return number.reduce((curResul:number,curValue:number) => {
+        return curResul + curValue;
+    },0);
+}
+const addedNumbers = add3(5,6,5,8,9)
+console.log(addedNumbers);
+
+
+// ******** Destructuring List *********
+
+const [hobby3,hooby4] = hobbies;
+
+console.log(hobby3,hooby4);
+
+// ******** Destructuring Dict *********
+
+const { firstname: name2,age } = person;
+ console.log(name2, age);
+ 

@@ -9,17 +9,21 @@
 // }
 // console.log(result)
 
-const hobbies = ['Sports','Cooking'];
-const activieHobbies = ['Hiking',...hobbies];
-console.log(activieHobbies);
+// const hobbies = ['Sports','Cooking'];
+// const activieHobbies = ['Hiking',...hobbies];
+// console.log(activieHobbies);
 
-const person ={
-    name: 'Victor',
-    age: 27,
-}
+// const person ={
+//     name: 'Victor',
+//     age: 27,
+// }
 
 const copyPerson = {
     lastName: 'Tilve',
+    ...person
+}
+//new object, not the same pointer
+const copyPerson2 = {
     ...person
 }
 console.log(copyPerson)
